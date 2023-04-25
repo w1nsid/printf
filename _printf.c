@@ -38,6 +38,7 @@ int _printf(const char *format, ...)
 			default:
 				_putchar('%'), printed_chars++;
 				_putchar(*format), printed_chars++;
+				va_arg(args, int);
 			}
 		}
 		else
