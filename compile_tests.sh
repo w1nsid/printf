@@ -10,8 +10,8 @@ done
 echo "Running tests..."
 echo "" > test.log
 for file in ./tests/*.out; do
-    echo "Running $file"
-    ./"$file" > test.log
+    echo "Running $file ---------------------------------------" >> test.log
+    ./"$file" >> test.log
 done
 
 echo "Tests complete. Check test.log for output."
