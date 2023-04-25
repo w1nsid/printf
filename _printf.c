@@ -39,6 +39,7 @@ int _printf(const char *format, ...)
 				_putchar('%'), printed_chars++;
 				_putchar(*format), printed_chars++;
 				va_arg(args, int);
+				break;
 			}
 		}
 		else
