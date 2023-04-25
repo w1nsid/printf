@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * _printf - prints anything
+ * @format: list of types of arguments passed to the function
+ * Return: number of characters printed (excluding the null
+ * byte used to end output to strings)
+ */
 
 int _printf(const char *format, ...)
 {
