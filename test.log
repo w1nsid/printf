@@ -1,15 +1,3 @@
 
-Running ./tests/main.out ---------------------------------------
-Let's try to printf a simple sentence.
-Length:[%d, %i]
-Negative:[%d]
-Unsigned:[%u]
-Unsigned octal:[%o]
-Unsigned hexadecimal:[%x, %X]
-Character:[H]
-String:[I am a string !]
-Address:[%p]
-Percent:[%]
-Len:[%d]
-Unknown:[%r]
 Running ./tests/test1.out ---------------------------------------
+Running ./tests/test2.out ---------------------------------------
