@@ -13,12 +13,3 @@ Percent:[%]
 Len:[%d]
 Unknown:[%r]
 Running ./tests/test1.out ---------------------------------------
-%0
-Running ./tests/test2.out ---------------------------------------
-Hello, world!
-Number of characters printed: 14
-Running ./tests/test3.out ---------------------------------------
-%
-10%%
-Number of characters printed: 2
-Number of characters printed: 5

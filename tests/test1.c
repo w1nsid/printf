@@ -9,18 +9,18 @@
  */
 int main(void)
 {
-    int len2;
+    int len, len2;
 
-    /* len = _printf(NULL); */
-    len2 = _printf(NULL);
-    _printf("%");
+    len = _printf("%");
+    len2 = printf("%");
     fflush(stdout);
-    printf("%d\n", len2);
-    /*     if (len != len2)
-        {
-            printf("Lengths differ.\n");
-            fflush(stdout);
-            return (1);
-        } */
+    if (len != len2)
+    {
+        printf("%d\n", len);
+        printf("%d\n", len2);
+        printf("Lengths differ.\n");
+        fflush(stdout);
+        return (1);
+    }
     return (0);
 }

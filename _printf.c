@@ -10,31 +10,27 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int printed_chars = 0;
-	char *str_arg, ch;
 
 	va_start(args, format);
 	if (format == NULL)
 		return (0);
 	while (*format)
 	{
-		if (*format == '%' && *(format + 1))
+		if (*format == '%')
 		{
 			format++;
+			if (!*format)
+				return (-1);
 			switch (*format)
 			{
 			case 'c':
-				ch = (char)va_arg(args, int);
-				_putchar(ch), printed_chars++;
+				printed_chars += print_char(args);
 				break;
 			case 's':
-				str_arg = va_arg(args, char *);
-				if (str_arg == NULL)
-					str_arg = "(null)";
-				while (*str_arg)
-					_putchar(*str_arg), str_arg++, printed_chars++;
+				printed_chars += print_string(args);
 				break;
 			case '%':
-				_putchar('%'), printed_chars++;
+				printed_chars += print_percent(args);
 				break;
 			default:
 				_putchar('%'), printed_chars++, _putchar(*format), printed_chars++;

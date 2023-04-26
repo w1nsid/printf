@@ -3,6 +3,10 @@
 rm -f ./tests/*.out
 # Compile all test programs
 for file in ./tests/*.c; do
+    # if filename contains ~ do not compile
+    if [[ $file == *"~"* ]]; then
+        continue
+    fi
     echo "Compiling $file"
     gcc -g -Wno-format -Wall -Werror -Wextra -pedantic -std=gnu89 $file *.c -o "${file%.c}.out"
 done
