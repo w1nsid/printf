@@ -33,11 +33,11 @@ int _printf(const char *format, ...)
 				printed_chars += print_percent(args);
 				break;
 			case 'd':
+			case 'i':
 				printed_chars += print_number(args);
 				break;
 			default:
-				_putchar('%'), printed_chars++, _putchar(*format), printed_chars++;
-				va_arg(args, int);
+				_putchar('%'), _putchar(*format), printed_chars += 2, va_arg(args, int);
 				break;
 			}
 		}

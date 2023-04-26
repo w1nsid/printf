@@ -58,11 +58,6 @@ int print_number(va_list list)
 	int count = 0;
 	int n = va_arg(list, int);
 
-	if (n < 0)
-	{
-		count++;
-		n = -n;
-	}
 	count += display_sign(n);
 	return (count);
 }

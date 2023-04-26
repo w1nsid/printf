@@ -7,8 +7,10 @@ for file in ./tests/*.c; do
     if [[ $file == *"~"* ]]; then
         continue
     fi
+    # change main.h to ../main.h
+    sed -i 's/#include "main.h"/#include "..\/main.h"/g' $file
     echo "Compiling $file"
-    gcc -g -Wno-format -Wall -Wextra -pedantic -std=gnu89 $file *.c -o "${file%.c}.out"
+    gcc -g -Wno-format -Wall -Werror -Wextra -pedantic -std=gnu89 $file *.c -o "${file%.c}.out"
 done
 
 # Run all test programs and save output to a log file
