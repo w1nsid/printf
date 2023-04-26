@@ -3,10 +3,8 @@
 
 int main(void)
 {
-    int printed_chars;
-
-    printed_chars = _printf("%c\n", 'A');
-    printf("Number of characters printed: %d\n", printed_chars);
+    /* print null */
+    _printf(NULL);
 
     return (0);
 }

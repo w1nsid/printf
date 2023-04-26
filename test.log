@@ -1,4 +1,25 @@
-%
-10%%
-Number of characters printed: 2
-Number of characters printed: 5
+
+Running ./tests/main.out ---------------------------------------
+Let's try to printf a simple sentence.
+Length:[%dd, %ii]
+Negative:[%dd]
+Unsigned:[%uu]
+Unsigned octal:[%oo]
+Unsigned hexadecimal:[%xx, %XX]
+Character:[Hc]
+String:[I am a string !s]
+Address:[%pp]
+Percent:[%%]]
+Len:[%dd]
+Unknown:[%rr]
+Running ./tests/test1.out ---------------------------------------
+Running ./tests/test2.out ---------------------------------------
+Hello, world!s
+Number of characters printed: 15
+Running ./tests/test3.out ---------------------------------------
+%%
+
+10%%%%
+
+Number of characters printed: 4
+Number of characters printed: 8
