@@ -46,3 +46,23 @@ int print_percent(va_list list)
 	_putchar('%');
 	return (1);
 }
+
+/**
+ * print_number - prints a number
+ * @list: number to print
+ * Return: number of characters printed
+ */
+
+int print_number(va_list list)
+{
+	int count = 0;
+	int n = va_arg(list, int);
+
+	if (n < 0)
+	{
+		count++;
+		n = -n;
+	}
+	count += display_sign(n);
+	return (count);
+}
