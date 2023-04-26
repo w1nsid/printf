@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 		return (-1);
 	while (*format)
 	{
-		if (*format == '%' && *(format + 1) != '%' && *(format + 1) != '\0')
+		if (*format == '%' && *(format + 1))
 		{
 			format++;
 			switch (*format)
@@ -44,7 +44,8 @@ int _printf(const char *format, ...)
 			}
 		}
 		else
-			_putchar(*format), printed_chars++, format++;
+			_putchar(*format), printed_chars++;
+		format++;
 	}
 	va_end(args);
 	return (printed_chars);
